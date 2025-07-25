@@ -313,7 +313,6 @@ const analyzeTopicFocus = (text: string): number => {
  * @returns 동적으로 생성된 쿼리 문자열
  */
 const generateDynamicQuery = (
-  textTokens: string[],
   keywordDensityResult: ReturnType<typeof analyzeKeywordDensity>,
   domainRelevance: ReturnType<typeof analyzeDomainRelevance>
 ): string => {
@@ -447,7 +446,7 @@ const evaluateRelevance = (
   // 동적 쿼리 생성 (사용자가 쿼리를 제공하지 않은 경우)
   const effectiveQuery =
     query ||
-    generateDynamicQuery(textTokens, keywordDensityResult, domainRelevance);
+    generateDynamicQuery(keywordDensityResult, domainRelevance);
 
   // 쿼리 토큰화 (개선: 최소 단어 길이 1로 설정)
   const queryTokens = tokenize(effectiveQuery, {

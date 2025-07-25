@@ -172,7 +172,7 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
       </div>
 
       {/* 탭 내용 */}
-      <div className="p-8">
+      <div className="p-4">
         <div
           className={`transition-opacity duration-300 ${
             isTabChanging ? "opacity-0" : "opacity-100"
@@ -180,7 +180,7 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
         >
           {activeTab === "expertise" && (
             <div className="animate-fade-in">
-              <div className="flex items-center mb-6">
+              <div className="flex items-center mb-3">
                 <div className="p-2 bg-primary-100 rounded-lg mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -202,7 +202,7 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                 </h3>
               </div>
 
-              <div className={`mb-8 p-6 rounded-2xl border ${getScoreBgClass(expertise.score)}`}>
+              <div className={`mb-4 p-4 rounded-xl border ${getScoreBgClass(expertise.score)}`}>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
                     <h4 className="text-xl font-medium mb-1">종합 점수</h4>
@@ -271,14 +271,14 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                 </div>
                 
                 {/* 핵심 인사이트 섹션 */}
-                <div className="mt-6 pt-4 border-t border-gray-200">
-                  <h5 className="text-lg font-semibold mb-3 flex items-center">
+                <div className="mt-3 pt-3 border-t border-gray-200">
+                  <h5 className="text-base font-semibold mb-2 flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
                     </svg>
                     핵심 인사이트
                   </h5>
-                  <div className="bg-white p-4 rounded-lg border border-primary-100 shadow-sm">
+                  <div className="bg-white p-3 rounded-lg border border-primary-100 shadow-sm">
                     <ul className="space-y-2">
                       <li className="flex items-start">
                         <span className="text-primary-500 mr-2">•</span>
@@ -314,14 +314,14 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                 
                 {/* 개선 제안 섹션 */}
                 {expertise.score < 80 && (
-                  <div className="mt-4">
-                    <h5 className="text-lg font-semibold mb-3 flex items-center">
+                  <div className="mt-3">
+                    <h5 className="text-base font-semibold mb-2 flex items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                       </svg>
                       개선 제안
                     </h5>
-                    <div className="bg-white p-4 rounded-lg border border-amber-200 shadow-sm">
+                    <div className="bg-white p-3 rounded-lg border border-amber-200 shadow-sm">
                       <ul className="space-y-2">
                         {expertise.topicCoherence !== "높음" && (
                           <li className="flex items-start">
@@ -357,9 +357,9 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                 )}
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <div className="bg-primary-50 p-6 rounded-2xl border border-primary-100">
-                  <h4 className="text-lg font-semibold mb-3 text-primary-700">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div className="bg-primary-50 p-3 rounded-xl border border-primary-100">
+                  <h4 className="text-base font-semibold mb-2 text-primary-700">
                     토픽 집중도
                   </h4>
                   <div className="flex items-center mb-4">
@@ -413,9 +413,9 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                 </div>
               </div>
 
-              <div className={`bg-gradient-to-br from-white to-primary-50 border border-primary-100 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl`}>
-                <div className="flex items-center justify-between mb-5">
-                  <h4 className="text-xl font-semibold flex items-center text-primary-700">
+              <div className={`bg-gradient-to-br from-white to-primary-50 border border-primary-100 rounded-xl p-4 shadow-md transition-all duration-300 hover:shadow-lg`}>
+                <div className="flex items-center justify-between mb-3">
+                  <h4 className="text-base font-semibold flex items-center text-primary-700">
                     <div className="p-2 bg-primary-100 rounded-lg mr-3 shadow-sm">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -439,8 +439,8 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                   </div>
                 </div>
                 
-                <div className="bg-white p-5 rounded-xl border border-primary-100 shadow-inner">
-                  <div className="mb-4 pb-3 border-b border-primary-100">
+                <div className="bg-white p-3 rounded-lg border border-primary-100 shadow-inner">
+                  <div className="mb-3 pb-2 border-b border-primary-100">
                     <div className="text-sm font-medium text-primary-700 mb-1">분석 요약</div>
                     <p className="text-gray-700">
                       이 텍스트는 주제 일관성과 전문 용어 활용도를 기준으로 평가되었습니다.
@@ -448,15 +448,15 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                   </div>
                   <div className="text-gray-800 space-y-4">
                     {/* 분석 결과 시각화 */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                      <div className="bg-gradient-to-br from-primary-50 to-white p-4 rounded-lg border border-primary-100 shadow-sm">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                      <div className="bg-gradient-to-br from-primary-50 to-white p-3 rounded-lg border border-primary-100 shadow-sm">
                         <div className="flex items-center mb-2">
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                           </svg>
                           <h5 className="font-semibold text-primary-700">분석 개요</h5>
                         </div>
-                        <p className="text-sm text-gray-700">
+                        <p className="text-xs text-gray-700">
                           이 텍스트는 주제 일관성과 전문 용어 활용도를 기준으로 평가되었으며, 
                           {expertise.score >= 70 ? " 우수한 " : expertise.score >= 50 ? " 양호한 " : " 개선이 필요한 "}
                           전문성 점수를 보여줍니다.
@@ -486,17 +486,17 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                     {/* 상세 분석 내용 - 시각적 레이아웃 */}
                     <div>
                       {/* 분석 결과 시각화 - 인포그래픽 스타일 */}
-                      <div className="mb-6 bg-gradient-to-r from-primary-50 to-white rounded-xl overflow-hidden border border-primary-100">
+                      <div className="mb-4 bg-gradient-to-r from-primary-50 to-white rounded-lg overflow-hidden border border-primary-100">
                         <div className="flex flex-col md:flex-row">
-                          <div className="md:w-1/3 bg-primary-100 p-4 flex flex-col justify-center">
-                            <h5 className="text-primary-800 font-bold text-lg mb-2 text-left">핵심 분석 결과</h5>
-                            <p className="text-primary-700 text-sm text-left">
+                          <div className="md:w-1/3 bg-primary-100 p-3 flex flex-col justify-center">
+                            <h5 className="text-primary-800 font-bold text-base mb-1 text-left">핵심 분석 결과</h5>
+                            <p className="text-primary-700 text-xs text-left">
                               이 텍스트는 {expertise.score >= 70 ? "높은" : expertise.score >= 50 ? "중간" : "낮은"} 
                               전문성을 보이며, 주제 일관성이 {expertise.topicCoherence === "높음" ? "우수" : "개선 필요"}합니다.
                             </p>
                           </div>
-                          <div className="md:w-2/3 p-4">
-                            <div className="flex items-center mb-3">
+                          <div className="md:w-2/3 p-3">
+                            <div className="flex items-center mb-2">
                               <div className="w-2 h-2 bg-primary-500 rounded-full mr-2"></div>
                               <span className="text-sm font-medium text-gray-700 text-left">주요 발견사항</span>
                             </div>
@@ -517,13 +517,13 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                       </div>
                       
                       {/* 분석 세부 내용 - 카드 레이아웃 */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
                         {expertise.details.split('\n\n').slice(0, 4).map((paragraph, idx) => {
                           // 제목 또는 섹션 헤더 처리 (콜론이 포함된 짧은 라인)
                           if (paragraph.includes(':') && paragraph.length < 50) {
                             const [title, value] = paragraph.split(':');
                             return (
-                              <div key={idx} className="bg-white p-4 rounded-lg border border-primary-100 shadow-sm text-left hover:shadow-md transition-shadow duration-300">
+                              <div key={idx} className="bg-white p-2 rounded-lg border border-primary-100 shadow-sm text-left hover:shadow-md transition-shadow duration-300">
                                 <div className="flex items-center mb-2">
                                   <div className="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center mr-3">
                                     <span className="text-primary-700 font-bold">{idx + 1}</span>
@@ -539,9 +539,9 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                       </div>
                       
                       {/* 텍스트 분석 결과 - 향상된 시각화 */}
-                      <div className="mb-6">
-                        <div className="bg-primary-50 p-4 rounded-t-lg border border-primary-100">
-                          <h5 className="text-primary-700 font-semibold flex items-center">
+                      <div className="mb-4">
+                        <div className="bg-primary-50 p-2 rounded-t-lg border border-primary-100">
+                          <h5 className="text-primary-700 font-semibold text-sm flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                               <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                             </svg>
@@ -550,16 +550,16 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                         </div>
                         
                         {/* 주제 일관성 분석 - 시각화 */}
-                        <div className="bg-white p-5 border-x border-b border-primary-100 rounded-b-lg">
-                          <div className="mb-6">
-                            <h6 className="text-primary-700 font-medium mb-3 flex items-center">
+                        <div className="bg-white p-3 border-x border-b border-primary-100 rounded-b-lg">
+                          <div className="mb-3">
+                            <h6 className="text-primary-700 font-medium mb-2 text-sm flex items-center">
                               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
                               </svg>
                               주제 일관성 분석
                             </h6>
                             
-                            <div className="bg-gradient-to-r from-primary-50 to-white p-4 rounded-lg border border-primary-100">
+                            <div className="bg-gradient-to-r from-primary-50 to-white p-2 rounded-lg border border-primary-100">
                               <div className="flex items-center justify-between mb-2">
                                 <span className="text-sm font-medium text-gray-700">일관성 점수</span>
                                 <span className="text-sm font-bold text-primary-700">
@@ -576,8 +576,8 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                                 ></div>
                               </div>
                               
-                              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                <div className="bg-white p-3 rounded-lg border border-primary-100 shadow-sm">
+                              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <div className="bg-white p-2 rounded-lg border border-primary-100 shadow-sm">
                                   <div className="text-xs text-gray-500 mb-1">주제 집중도</div>
                                   <div className="text-sm font-medium text-primary-700">{expertise.topicCoherence}</div>
                                 </div>
@@ -593,15 +593,15 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                           </div>
                           
                           {/* 키워드 분석 - 시각화 */}
-                          <div className="mb-6">
-                            <h6 className="text-primary-700 font-medium mb-3 flex items-center">
+                          <div className="mb-3">
+                            <h6 className="text-primary-700 font-medium mb-2 text-sm flex items-center">
                               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                               </svg>
                               키워드 분석
                             </h6>
                             
-                            <div className="bg-gradient-to-r from-primary-50 to-white p-4 rounded-lg border border-primary-100">
+                            <div className="bg-gradient-to-r from-primary-50 to-white p-2 rounded-lg border border-primary-100">
                               <div className="flex items-center justify-between mb-2">
                                 <span className="text-sm font-medium text-gray-700">키워드 활용도</span>
                                 <span className="text-sm font-bold text-primary-700">
@@ -628,8 +628,8 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                                 </div>
                               </div>
                               
-                              <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                                <div className="bg-white p-2 rounded-lg border border-primary-100 shadow-sm">
+                              <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+                                <div className="bg-white p-1.5 rounded-lg border border-primary-100 shadow-sm">
                                   <div className="text-xs text-gray-500 mb-1">도메인 키워드</div>
                                   <div className="text-sm font-medium text-primary-700">
                                     {expertise.keywordAnalysis?.categories?.domain?.count || 0}개
@@ -662,7 +662,7 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                               세부 점수 분석
                             </h6>
                             
-                            <div className="bg-gradient-to-r from-primary-50 to-white p-4 rounded-lg border border-primary-100">
+                            <div className="bg-gradient-to-r from-primary-50 to-white p-2 rounded-lg border border-primary-100">
                               <div className="space-y-4">
                                 <div>
                                   <div className="flex justify-between items-center mb-1">
@@ -722,8 +722,8 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                     </div>
                     
                     {/* 키워드 하이라이트 - 구조화된 데이터 활용 */}
-                    <div className="mt-6 pt-4 border-t border-primary-200">
-                      <h5 className="text-primary-700 font-semibold mb-3 flex items-center">
+                    <div className="mt-3 pt-2 border-t border-primary-200">
+                      <h5 className="text-primary-700 font-semibold mb-2 text-sm flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                         </svg>
@@ -747,17 +747,17 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                     </div>
                     
                     {/* 핵심 문장 - 구조화된 데이터 활용 */}
-                    <div className="mt-6 pt-4 border-t border-primary-200">
-                      <h5 className="text-primary-700 font-semibold mb-3 flex items-center">
+                    <div className="mt-3 pt-2 border-t border-primary-200">
+                      <h5 className="text-primary-700 font-semibold mb-2 text-sm flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                         </svg>
                         핵심 문장
                       </h5>
-                      <div className="space-y-3 mt-2">
+                      <div className="space-y-2 mt-1">
                         {expertise.keySentences?.length > 0 ? (
                           expertise.keySentences.slice(0, 3).map((sentence, idx) => (
-                            <div key={idx} className="bg-white p-3 rounded-lg border border-primary-100 shadow-sm">
+                            <div key={idx} className="bg-white p-2 rounded-lg border border-primary-100 shadow-sm">
                               <div className="flex">
                                 <div className="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center mr-3 flex-shrink-0">
                                   <span className="text-primary-700 font-bold text-xs">{idx + 1}</span>
@@ -788,8 +788,8 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
 
           {activeTab === "trustworthiness" && (
             <div className="animate-fade-in">
-              <div className="flex items-center mb-6">
-                <div className="p-2 bg-secondary-100 rounded-lg mr-3">
+              <div className="flex items-center mb-3">
+                <div className="p-1.5 bg-secondary-100 rounded-lg mr-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 text-secondary-600"
@@ -810,7 +810,7 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                 </h3>
               </div>
 
-              <div className={`mb-8 p-6 rounded-2xl border ${getScoreBgClass(trustworthiness.score)}`}>
+              <div className={`mb-4 p-4 rounded-xl border ${getScoreBgClass(trustworthiness.score)}`}>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
                     <h4 className="text-xl font-medium mb-1">종합 점수</h4>
@@ -1323,8 +1323,8 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
 
           {activeTab === "relevance" && (
             <div className="animate-fade-in">
-              <div className="flex items-center mb-6">
-                <div className="p-2 bg-warning-100 rounded-lg mr-3">
+              <div className="flex items-center mb-3">
+                <div className="p-1.5 bg-warning-100 rounded-lg mr-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 text-warning-600"
@@ -1345,7 +1345,7 @@ const DetailedReport = ({ result }: DetailedReportProps) => {
                 </h3>
               </div>
 
-              <div className={`mb-8 p-6 rounded-2xl border ${getScoreBgClass(relevance.score)}`}>
+              <div className={`mb-4 p-4 rounded-xl border ${getScoreBgClass(relevance.score)}`}>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
                     <h4 className="text-xl font-medium mb-1">종합 점수</h4>

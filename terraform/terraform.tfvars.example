@@ -1,0 +1,17 @@
+# AWS 리전 설정
+aws_region = "ap-northeast-2" # 서울 리전
+
+# S3 버킷 이름 설정 (글로벌하게 유니크해야 함)
+bucket_name = "your-unique-bucket-name-here"
+
+# 환경 설정
+environment = "prod"
+
+# 도메인 이름 설정 (없으면 빈 문자열)
+domain_name = ""
+
+# Route53 호스팅 영역 ID (없으면 빈 문자열)
+hosted_zone_id = ""
+
+# ACM 인증서 ARN (없으면 빈 문자열)
+acm_certificate_arn = ""

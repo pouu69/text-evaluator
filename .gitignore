@@ -24,3 +24,12 @@ dist-ssr
 *.sw?
 
 .claude
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraformrc
+terraform.rc
+.terraform.lock.hcl

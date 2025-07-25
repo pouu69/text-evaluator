@@ -8,6 +8,8 @@
 - TypeScript
 - Vite
 - Tailwind CSS 4
+- AWS (S3, CloudFront, ACM)
+- Terraform
 
 ## 설치 방법
 
@@ -59,11 +61,36 @@ text-evaluator/
 │   ├── index.css       # 글로벌 스타일 (Tailwind 포함)
 │   └── main.tsx        # 앱 진입점
 ├── public/             # 정적 파일
+├── terraform/          # AWS 인프라 설정
+│   ├── main.tf         # 주요 리소스 정의
+│   ├── variables.tf    # 변수 정의
+│   ├── outputs.tf      # 출력 정의
+│   ├── terraform.tfvars # 변수 값 설정
+│   └── deploy.sh       # 배포 스크립트
 ├── tailwind.config.js  # Tailwind 설정
 ├── postcss.config.js   # PostCSS 설정
 ├── vite.config.ts      # Vite 설정
 └── package.json        # 프로젝트 의존성
 ```
+
+## AWS 배포 방법
+
+이 프로젝트는 AWS S3와 CloudFront를 사용하여 정적 웹사이트로 배포할 수 있습니다. 자세한 배포 방법은 [terraform/README.md](terraform/README.md) 파일을 참조하세요.
+
+### 간단한 배포 과정
+
+1. AWS CLI와 Terraform이 설치되어 있어야 합니다.
+2. AWS 계정이 설정되어 있어야 합니다.
+3. Terraform 초기화 및 적용:
+   ```bash
+   cd terraform
+   terraform init
+   terraform apply
+   ```
+4. 배포 스크립트 실행:
+   ```bash
+   ./deploy.sh
+   ```
 
 ## 라이센스
 
